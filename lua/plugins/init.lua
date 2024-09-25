@@ -6,19 +6,19 @@ return {
   },
 
   -- These are some examples, uncomment them if you want to see them work!
---  {
---    "mhartington/formatter.nvim",
---    event = "VeryLazy",
---    opts = function ()
---      return require("configs.formatter")
---    end
---  },
+  --  {
+  --    "mhartington/formatter.nvim",
+  --    event = "VeryLazy",
+  --    opts = function ()
+  --      return require("configs.formatter")
+  --    end
+  --  },
   {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
-    config = function ()
-      require("configs.lint")
-    end
+    config = function()
+      require "configs.lint"
+    end,
   },
   {
     "williamboman/mason.nvim",
@@ -26,9 +26,13 @@ return {
       ensure_installed = {
         "eslint-lsp",
         "typescript-language-server",
-        "prettier"
-      }
-    }
+        "prettier",
+        "goimports",
+        "gofumpt",
+        "gomodifytags",
+        "impl",
+      },
+    },
   },
 
   {
@@ -40,16 +44,16 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
-    config = function ()
+    config = function()
       -- Mapping tab is already used by NvChad
-      vim.g.copilot_no_tab_map = true;
-      vim.g.copilot_assume_mapped = true;
-      vim.g.copilot_tab_fallback = "";
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      vim.g.copilot_tab_fallback = ""
       -- The mapping is set to other key, see lua/mappings
       -- or run <leader>ch to see copilot mapping section
-    end
-  }
-    -- {
+    end,
+  },
+  -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
   -- 		ensure_installed = {

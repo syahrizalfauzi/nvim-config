@@ -8,8 +8,9 @@ local options = {
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
     json = { "prettier" },
-    go = { "gofmt" }
-   },
+    go = { "gofmt" },
+    php = { "pretty-php" },
+  },
 
   format_on_save = {
     -- These options will be passed to conform.format()
