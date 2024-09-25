@@ -27,6 +27,7 @@ return {
         "eslint-lsp",
         "typescript-language-server",
         "prettier",
+        "gopls",
         "goimports",
         "gofumpt",
         "gomodifytags",

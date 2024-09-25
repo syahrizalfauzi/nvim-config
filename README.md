@@ -1,5 +1,9 @@
-*How to use*
+**How to use**
 - Clone this repo to your nvim config directory (usually ~/.config/nvim)
+- Run :MasonInstallAll to install all of the required plugins
+- Run :TSInstall <language> to install nvim-tresitter language parsers
+  - `:TSInstall dockerfile go html css javascript json lua markdown php typescript yaml angular`
+  - `:Copilot setup` to setup copilot
 
 **This repo is supposed to used as config by NvChad users!**
 
