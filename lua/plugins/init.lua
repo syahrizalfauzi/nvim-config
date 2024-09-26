@@ -22,21 +22,21 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "eslint-lsp",
-        "typescript-language-server",
-        "prettier",
-        "gopls",
-        "goimports",
-        "gofumpt",
-        "gomodifytags",
-        "impl",
-        "eslint_d",
-        "phpcs",
-        "angular-language-server",
-      },
-    },
+    -- opts = {
+    --   ensure_installed = {
+    --     "eslint-lsp",
+    --     "typescript-language-server",
+    --     "prettier",
+    --     "gopls",
+    --     "goimports",
+    --     "gofumpt",
+    --     "gomodifytags",
+    --     "impl",
+    --     "eslint_d",
+    --     "phpcs",
+    --     "angular-language-server",
+    --   },
+    -- },
   },
 
   {
