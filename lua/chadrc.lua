@@ -37,6 +37,7 @@ M.mason = {
     "eslint_d",
     "phpcs",
     "angular-language-server",
+    "bash-language-server",
   },
 }
 return M
