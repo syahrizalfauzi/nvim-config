@@ -3,7 +3,7 @@ require "nvchad.mappings"
 -- add yours here
 
 local map = vim.keymap.set
-
+local cmp = require "cmp"
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 
 map("i", "jk", "<ESC>")
@@ -25,3 +25,14 @@ map("i", "<C-l>", 'copilot#Accept("\\<CR>")', {
   replace_keycodes = false,
 })
 vim.g.copilot_no_tab_map = true
+
+map("n", "<leader>ci", function()
+  vim.api.nvim_feedkeys("ea", "n", false)
+  vim.defer_fn(function()
+    cmp.complete()
+  end, 10)
+end, {
+  noremap = true,
+  silent = true,
+  desc = "Show code suggestion #2",
+})
