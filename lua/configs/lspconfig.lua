@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "ts_ls", "gopls", "intelephense", "angularls", "bashls" }
+local servers = { "html", "cssls", "ts_ls", "gopls", "intelephense", "angularls", "bashls", "rust_analyzer" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -67,7 +67,7 @@ local cmd = {
 
 lspconfig.angularls.setup {
   cmd = cmd,
-  on_new_config = function(new_config, new_root_dir)
+  on_new_config = function(new_config)
     new_config.cmd = cmd
   end,
   root_dir = util.root_pattern "angular.json",

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of npm packages to install globally
-packages=(
+npmPackages=(
     vscode-langservers-extracted
     dockerfile-language-server-nodejs
     bash-language-server 
@@ -18,7 +18,7 @@ then
 fi
 
 # Loop through each package in the array and install it globally
-for package in "${packages[@]}"; do
+for package in "${npmPackages[@]}"; do
     echo "Installing $package globally..."
     npm i -g "$package"
     
@@ -31,3 +31,4 @@ for package in "${packages[@]}"; do
     fi
 done
 
+rustup component add rustfmt

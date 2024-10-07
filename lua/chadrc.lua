@@ -38,6 +38,7 @@ M.mason = {
     "phpcs",
     "angular-language-server",
     "bash-language-server",
+    "rust-analyzer",
   },
 }
 return M

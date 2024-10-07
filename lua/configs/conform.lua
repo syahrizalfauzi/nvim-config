@@ -10,6 +10,7 @@ local options = {
     json = { "prettier" },
     go = { "gofmt" },
     php = { "pretty-php" },
+    rust = { "rustfmt" },
   },
 
   -- format_on_save = {
