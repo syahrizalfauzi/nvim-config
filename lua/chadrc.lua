@@ -23,6 +23,9 @@ local stbufnr = function()
 end
 
 M.ui = {
+  telescope = {
+    style = "bordered",
+  },
   tabufline = {
     order = { "btns", "tabs", "buffers", "treeOffset" },
   },
