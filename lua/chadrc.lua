@@ -15,6 +15,17 @@ autocmd("VimEnter", {
 ---@type ChadrcConfig
 local M = {}
 
+M.ui = {
+  tabufline = {
+    order = { "btns", "tabs", "buffers", "treeOffset" },
+  },
+  -- tabufline = {
+  --   overriden_modules = function(modules)
+  --     table.insert(modules, modules[1])
+  --     table.remove(modules, 1)
+  --   end,
+  -- },
+}
 M.base46 = {
   theme = "catppuccin",
 
