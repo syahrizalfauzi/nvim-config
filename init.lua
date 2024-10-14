@@ -37,3 +37,10 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+if vim.g.neovide then
+  vim.o.guifont = "FiraCode Nerd Font:h10"
+  vim.opt.linespace = 4
+  vim.g.neovide_cursor_smooth_blink = true
+  vim.g.neovide_cursor_vfx_mode = "sonicboom"
+end
