@@ -43,4 +43,14 @@ if vim.g.neovide then
   vim.opt.linespace = 4
   vim.g.neovide_cursor_smooth_blink = true
   vim.g.neovide_cursor_vfx_mode = "sonicboom"
+
+  -- macos only
+  vim.g.neovide_window_blurred = true
+  vim.g.neovide_transparency = 0.8
+  vim.g.transparency = 0.8
+  vim.g.neovide_input_macos_option_key_is_meta = "both"
 end
+
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#51B3EC", bold = true })
+vim.api.nvim_set_hl(0, "LineNr", { fg = "white", bold = true })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#FB508F", bold = true })
