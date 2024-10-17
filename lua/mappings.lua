@@ -36,3 +36,10 @@ end, {
   silent = true,
   desc = "Show code suggestion #2",
 })
+
+-- vim.api.nvim_set_keymap('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>', {noremap = true, silent = true})
+map("n", "<Leader>ff", ":lua require'telescope.builtin'.find_files({ hidden = true })<CR>", {
+  noremap = true,
+  silent = true,
+  desc = "Find files",
+})
