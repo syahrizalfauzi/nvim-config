@@ -24,7 +24,7 @@ end
 --   capabilities = nvlsp.capabilities,
 -- }
 --
-local function organize_imports()
+_G.organize_imports = function()
   local params = {
     command = "_typescript.organizeImports",
     arguments = { vim.api.nvim_buf_get_name(0) },
@@ -33,7 +33,19 @@ local function organize_imports()
 end
 
 lspconfig.ts_ls.setup {
-  on_attach = nvlsp.on_attach,
+  on_attach = function(client, bufnr)
+    nvlsp.on_attach(client, bufnr)
+
+    -- Map Ctrl+Shift+O to organize imports
+    vim.api.nvim_buf_set_keymap(
+      bufnr,
+      "n",
+      "<C-S-o>",
+      "<cmd>lua organize_imports()<CR>",
+      { noremap = true, silent = true }
+    )
+  end,
+  on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
   init_options = {
     preferences = {
