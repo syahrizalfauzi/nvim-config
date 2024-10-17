@@ -46,8 +46,8 @@ if vim.g.neovide then
 
   -- macos only
   vim.g.neovide_window_blurred = true
-  vim.g.neovide_transparency = 0.8
-  vim.g.transparency = 0.8
+  vim.g.neovide_transparency = 0.95
+  vim.g.transparency = 0.95
   vim.g.neovide_input_macos_option_key_is_meta = "both"
 end
 
