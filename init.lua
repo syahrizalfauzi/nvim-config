@@ -55,6 +55,12 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#51B3EC", bold = true })
 vim.api.nvim_set_hl(0, "LineNr", { fg = "white", bold = true })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#FB508F", bold = true })
 
+-- High contrast background and text colors for diagnostics
+vim.api.nvim_set_hl(0, "DiagnosticError", { bg = "#ff5555", fg = "#ffffff" }) -- red background, white text for errors
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { bg = "#ffaa00", fg = "#000000" }) -- yellow background, black text for warnings
+-- vim.api.nvim_set_hl(0, "DiagnosticInfo", { bg = "#5555ff", fg = "#ffffff" }) -- blue background, white text for info
+-- vim.api.nvim_set_hl(0, "DiagnosticHint", { bg = "#aaaaaa", fg = "#000000" }) -- gray background, black text for hints
+
 -- Windows only
 vim.o.shell = "powershell"
 vim.o.shellcmdflag =
