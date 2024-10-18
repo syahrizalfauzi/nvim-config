@@ -58,7 +58,7 @@ M.mason = {
   pkgs = {
     "eslint-lsp",
     "typescript-language-server",
-    "prettier",
+    "prettierd",
     "gopls",
     "goimports",
     "gofumpt",
