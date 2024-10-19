@@ -69,6 +69,7 @@ M.mason = {
     "angular-language-server",
     "bash-language-server",
     "rust-analyzer",
+    "tailwindcss-language-server",
   },
 }
 return M
