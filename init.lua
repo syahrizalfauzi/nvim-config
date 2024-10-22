@@ -38,11 +38,20 @@ vim.schedule(function()
   require "mappings"
 end)
 
+-- vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
+
+-- Set the cursor style and blink options
+vim.o.guicursor =
+  "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+
 if vim.g.neovide then
   vim.o.guifont = "FiraCode Nerd Font:h10"
   vim.opt.linespace = 4
   vim.g.neovide_cursor_smooth_blink = true
   vim.g.neovide_cursor_vfx_mode = "sonicboom"
+  vim.g.neovide_cursor_animation_length = 0.025
+  vim.g.neovide_cursor_trail_size = 0.5
+  vim.g.neovide_scroll_animation_length = 0.2
 
   -- macos only
   vim.g.neovide_window_blurred = true
