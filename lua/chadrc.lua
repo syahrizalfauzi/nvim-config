@@ -53,6 +53,8 @@ M.base46 = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
     CursorLine = { bg = "grey_fg" },
+    DiagnosticError = { standout = true },
+    DiagnosticWarn = { standout = true },
   },
 }
 
