@@ -1,6 +1,6 @@
 return {
   "christoomey/vim-tmux-navigator",
-  lazy = false,
+  -- lazy = false,
   cmd = {
     "TmuxNavigateLeft",
     "TmuxNavigateDown",
@@ -9,10 +9,10 @@ return {
     "TmuxNavigatePrevious",
   },
   keys = {
-    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+    { "<C-h>", "<cmd><C-U>TmuxNavigateLeft<CR>" },
+    { "<C-j>", "<cmd><C-U>TmuxNavigateDown<CR>" },
+    { "<C-k>", "<cmd><C-U>TmuxNavigateUp<CR>" },
+    { "<C-l>", "<cmd><C-U>TmuxNavigateRight<CR>" },
+    { "<C-\\>", "<cmd><C-U>TmuxNavigatePrevious<CR>" },
   },
 }
