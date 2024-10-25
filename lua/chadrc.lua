@@ -28,6 +28,7 @@ M.ui = {
   },
   tabufline = {
     order = { "btns", "tabs", "buffers", "treeOffset" },
+    enabled = false,
   },
   statusline = {
     theme = "default",
