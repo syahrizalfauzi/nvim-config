@@ -38,11 +38,11 @@ end, {
 })
 
 -- vim.api.nvim_set_keymap('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>', {noremap = true, silent = true})
-map("n", "<Leader>ff", ":lua require'telescope.builtin'.find_files({ hidden = true })<CR>", {
-  noremap = true,
-  silent = true,
-  desc = "Find files",
-})
+-- map("n", "<Leader>ff", ":lua require'telescope.builtin'.find_files({ hidden = true })<CR>", {
+--   noremap = true,
+--   silent = true,
+--   desc = "Find files",
+-- })
 
 vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { silent = true })
 vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { silent = true })
