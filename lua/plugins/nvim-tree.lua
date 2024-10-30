@@ -8,6 +8,7 @@ return {
   opts = {
     view = {
       side = "right",
+      adaptive_size = true,
       number = true,
     },
     filters = {
