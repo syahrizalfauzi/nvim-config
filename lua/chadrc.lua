@@ -53,28 +53,12 @@ M.base46 = {
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
-    CursorLine = { bg = "grey_fg" },
+    NvimTreeCursorLine = { standout = true },
+    CursorLineNr = { standout = true },
     DiagnosticError = { standout = true },
     DiagnosticWarn = { standout = true },
+    Visual = { standout = true },
   },
 }
 
-M.mason = {
-  pkgs = {
-    "eslint-lsp",
-    "typescript-language-server",
-    "prettierd",
-    "gopls",
-    "goimports",
-    "gofumpt",
-    "gomodifytags",
-    "impl",
-    "eslint_d",
-    "phpcs",
-    "angular-language-server",
-    "bash-language-server",
-    "rust-analyzer",
-    "tailwindcss-language-server",
-  },
-}
 return M
