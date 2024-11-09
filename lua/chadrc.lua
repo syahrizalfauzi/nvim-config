@@ -57,7 +57,7 @@ M.base46 = {
     CursorLineNr = { standout = true },
     DiagnosticError = { standout = true },
     DiagnosticWarn = { standout = true },
-    Visual = { standout = true },
+    Visual = { bg = "light_grey" },
   },
 }
 
