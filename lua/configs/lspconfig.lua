@@ -3,20 +3,36 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
+local ufo = require "ufo"
 
--- EXAMPLE
 local servers =
   { "html", "cssls", "ts_ls", "gopls", "intelephense", "angularls", "bashls", "rust_analyzer", "tailwindcss" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
+vim.o.foldcolumn = "1" -- '0' is not bad
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
+-- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
+vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+
 for _, lsp in ipairs(servers) do
+  -- for UFO (fold)
+  local capabilities = nvlsp.capabilities
+  capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true,
+  }
+
   lspconfig[lsp].setup {
     on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
     capabilities = nvlsp.capabilities,
   }
 end
+ufo.setup()
 
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
