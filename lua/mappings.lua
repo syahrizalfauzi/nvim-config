@@ -37,15 +37,9 @@ end, {
   desc = "Show code suggestion #2",
 })
 
--- vim.api.nvim_set_keymap('n', '<Leader>ff', ':lua require"telescope.builtin".find_files({ hidden = true })<CR>', {noremap = true, silent = true})
--- map("n", "<Leader>ff", ":lua require'telescope.builtin'.find_files({ hidden = true })<CR>", {
---   noremap = true,
---   silent = true,
---   desc = "Find files",
--- })
-
-vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { silent = true })
-vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { silent = true })
-vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { silent = true })
-vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { silent = true })
-vim.keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigatePrevious<CR>", { silent = true })
+-- Tmux Navigate
+map("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { silent = true })
+map("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { silent = true })
+map("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { silent = true })
+map("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { silent = true })
+map("n", "<C-\\>", "<Cmd>NvimTmuxNavigatePrevious<CR>", { silent = true })
