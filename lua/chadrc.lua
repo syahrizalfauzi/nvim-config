@@ -48,7 +48,7 @@ M.ui = {
 }
 M.base46 = {
   theme = "tokyonight",
-  transparency = true,
+  -- transparency = true, uncomment if using neovide
 
   hl_override = {
     Comment = { italic = true },

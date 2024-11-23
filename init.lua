@@ -45,7 +45,7 @@ vim.o.guicursor =
   "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 if vim.g.neovide then
-  vim.o.guifont = "FiraCode Nerd Font:h10"
+  vim.o.guifont = "FiraCode Nerd Font:h14"
   vim.opt.linespace = 4
   vim.g.neovide_cursor_smooth_blink = true
   vim.g.neovide_cursor_vfx_mode = "sonicboom"
@@ -65,10 +65,10 @@ vim.api.nvim_set_hl(0, "LineNr", { fg = "white", bold = true })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#FB508F", bold = true })
 
 -- Windows only
-vim.o.shell = "powershell"
-vim.o.shellcmdflag =
-  "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
-vim.o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
-vim.o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
-vim.o.shellquote = ""
-vim.o.shellxquote = ""
+-- vim.o.shell = "powershell"
+-- vim.o.shellcmdflag =
+--   "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
+-- vim.o.shellredir = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+-- vim.o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+-- vim.o.shellquote = ""
+-- vim.o.shellxquote = ""
